@@ -65,3 +65,40 @@ function atualizaEstatistica(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas]
     })
 }
+
+const coresRobo = document.querySelectorAll("[data-cores]")
+const robo = document.querySelector("[data-robo]")
+
+const valorDasCores = {
+    "amarelo": {
+        src: "../img/Robotron 2000 - Amarelo/robotron.png"
+    },
+    "azul": {
+        src: "../img/Robotron 2000 - azul/robotron.png"
+    },
+    "preto": {
+        src: "../img/Robotron 2000 - preto/robotron.png"
+    },
+    "rosa": {
+        src: "../img/Robotron 2000 - rosa/robotron.png"
+    }
+}
+
+coresRobo.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        console.log(elemento.dataset.cores)
+        if (elemento.dataset.cores == 'amarelo') {
+            robo.src = "../img/Robotron 2000 - Amarelo/robotron.png"
+        }
+        if (elemento.dataset.cores == 'azul') {
+            robo.src = "../img/Robotron 2000 - Azul/robotron.png"
+        }
+        if (elemento.dataset.cores == 'preto') {
+            robo.src = "../img/Robotron 2000 - Preto/robotron.png"
+        }
+        if (elemento.dataset.cores == 'rosa') {
+            robo.src = "../img/Robotron 2000 - Rosa/robotron.png"
+        }
+    })
+})
