@@ -97,7 +97,7 @@ coresRobo.forEach((elemento) => {
             robo.src = "../img/Robotron 2000 - Preto/robotron.png"
         }
         if (elemento.dataset.cores == 'rosa') {
-            robo.src = "../img/Robotron 2000 - Rosa/robotron.png"
+            robo.src = "img/Robotron 2000 - Rosa/robotron.png"
         }
     })
 })
