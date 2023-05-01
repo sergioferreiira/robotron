@@ -87,7 +87,6 @@ const valorDasCores = {
 coresRobo.forEach((elemento) => {
     elemento.addEventListener('click', (evento) => {
         evento.preventDefault();
-        console.log(elemento.dataset.cores)
         if (elemento.dataset.cores == 'amarelo') {
             robo.src = "../img/Robotron 2000 - Amarelo/robotron.png"
         }
